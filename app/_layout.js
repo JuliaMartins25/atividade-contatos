@@ -3,21 +3,23 @@ import React from "react";
 import { Stack } from "expo-router";
 import { Pressable, Text, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
+import {Provider as PaperProvider, DefaultTheme} from "react-native-paper";
 
 export default function Layout() {
   const router = useRouter();
 
   return (
+    <PaperProvider theme={DefaultTheme}>
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: "#FF69B4" }, // Cor vermelha da paleta (Pantone 485)
+        headerStyle: { backgroundColor: "#FF69B4" },
         headerTintColor: "#fff", // Cor do texto no cabeçalho (branco)
       }}
     >
       <Stack.Screen
         name="index"
         options={{
-          title: "📝 Meus Contatos",
+          title: "📱 Meus Contatos",
           headerRight: () => (
             <Pressable
               onPress={() => router.push("/settings")} // Navegação para a tela de configurações
@@ -33,6 +35,7 @@ export default function Layout() {
         options={{ title: "⚙️ Configurações" }} // Título para a tela de configurações
       />
     </Stack>
+    </PaperProvider>
   );
 }
 
