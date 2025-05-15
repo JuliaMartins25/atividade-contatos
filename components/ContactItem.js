@@ -7,8 +7,8 @@ export default function ContactItem({ name, phone, category, onEdit, onDelete  }
 
     return (
         <List.Item
-            title={name} // Alterado de `contact.name` para `name`
-            description={`${phone} • ${category}`} // Alterado de `contact.phone` e `contact.category` para as props
+            title={name} 
+            description={`${phone} • ${category}`} 
             left={() => (
                 <Avatar.Text size={40} label={initial} style={{ backgroundColor: "#FF69B4" }} />
             )}

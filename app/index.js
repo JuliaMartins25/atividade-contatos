@@ -6,7 +6,7 @@ import {
   Alert,
   StyleSheet,
 } from "react-native";
-import { FAB, Portal, TextInput, Button, List, Avatar, Dialog } from "react-native-paper";
+import { FAB, Portal, TextInput, Button, List, Dialog } from "react-native-paper";
 import ContactItem from "../components/ContactItem"; // Importando o componente de item de contato
 
 export default function HomeScreen() {
@@ -132,8 +132,8 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: "absolute",
-    right: 16,
     bottom: 16,
+    alignSelf: "center",
     backgroundColor: "#FF69B4",
   },
 });
